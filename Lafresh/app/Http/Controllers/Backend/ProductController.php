@@ -25,6 +25,7 @@ class ProductController extends Controller
             'price' => $request->price,
             'discription' => $request->discription,
             'discount' => $request->discount,
+            'category_id' => $request->category_id,
             'image' => $response->getSecurePath(),
             'created_at' => Carbon::now(),
         ]);
@@ -39,6 +40,7 @@ class ProductController extends Controller
         $pro_upd->price = $request->input('price', $pro_upd->price);
         $pro_upd->discription = $request->input('discription', $pro_upd->discription);
         $pro_upd->discount = $request->input('discount', $pro_upd->discount);
+        $pro_upd->category_id = $request->input('category_id', $pro_upd->category_id);
         $pro_upd->updated_at = Carbon::now(); 
     
         // Check if a new  photo is provided

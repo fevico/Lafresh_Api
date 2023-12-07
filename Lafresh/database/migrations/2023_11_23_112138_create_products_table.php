@@ -17,6 +17,7 @@ return new class extends Migration
             $table->decimal('price', 8, 2);
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->text('discription');
+            $table->string('category_id');
             $table->decimal('discount', 8, 2)->default(0);
             $table->text('image');
             $table->timestamps();
